@@ -9,13 +9,13 @@ brews:
   - name: commet
     description: Generate commit messages using an LLM
     homepage: https://github.com/gcascio/homebrew-commet
-    tap:
+    repository:
       owner: gcascio
       name: homebrew-commet
     commit_author:
       name: gcascio
       email: giovanni@maternavis.com
-    folder: Formula
+    directory: Formula
 
 builds:
   - env:
