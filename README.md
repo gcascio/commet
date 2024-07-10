@@ -1,4 +1,8 @@
-# Commet
+<p align="center">
+  <picture>
+    <img src="https://github.com/gcascio/commet/assets/35739042/289afcf0-4e83-47b4-bb89-c3d0753dd881"  height="120" alt="Banner for Commet">
+  </picture>
+</p>
 
 ## Intro
 
