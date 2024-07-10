@@ -14,7 +14,15 @@ Commet does three things using your local git installation and Ollama:
 
 ## Installation
 
-TBD
+### Homebrew Tap
+
+`brew tap gcascio/commet`
+
+`brew install commet`
+
+### Manually
+
+Download the pre-compiled binaries from the [releases page](https://github.com/gcascio/commet/releases) and copy them to the desired location.
 
 ### Requirements
 
@@ -36,8 +44,13 @@ TBD
 
 ### Configuration
 
-TBD
+For persistent configurations commet can be configured with a .commet.yaml file in the home directory. E.g.
+
+```yaml
+llm: https://mydomain.com
+model: mistral
+```
 
 ## Limitations
 
-TBD
+Commet works best with small to medium sized changes. Trying to generate a commit message for a large change over multiple files usually results in unsatisfying results. In these cases it is recommended to split the changes into multiple smaller commits.
