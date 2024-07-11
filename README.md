@@ -6,13 +6,13 @@
 
 ## Intro
 
-Commet creates commit messages using Ollama. There are plenty of tools out there that do this but I was looking for something that does not run a pr-commit hook but is just an alternative CLI command to `git commit` which I can use across my projects and integrates into my current workflow.
+Commet creates commit messages using Ollama. There are plenty of tools out there that do this but I was looking for something that does not rely on a pre-commit hook or similar. Instead I wanted just an alternative CLI command to `git commit` which I can use across my projects and integrates into my current workflow.
 
 ## How it works
 
 Commet does three things using your local git installation and Ollama:
 
-1. Get the current diff of the staged files (`git diff --cached`)
+1. Get the current diff of the staged files (e.g. `git diff --cached`)
 2. Send the diff with a prompt asking for a commit message to Ollama
 3. Commit the changes and opening the editor to potentially edit the message (`git commit -m <the message> -e`)
 
@@ -31,7 +31,7 @@ Download the pre-compiled binaries from the [releases page](https://github.com/g
 ### Requirements
 
 1. Local git installation
-2. Access to ollama API (by default at http://localhost:11434) with a model of choice (default: mistral)
+2. Access to the ollama API (by default at http://localhost:11434) with a model of choice (default: mistral)
 
 ## Usage
 
@@ -58,3 +58,7 @@ model: mistral
 ## Limitations
 
 Commet works best with small to medium sized changes. Trying to generate a commit message for a large change over multiple files usually results in unsatisfying results. In these cases it is recommended to split the changes into multiple smaller commits.
+
+## Acknowledgments
+
+As a starting point, the prompt to create the commit messages is mostly taken from [opencommit](https://github.com/di-sukharev/opencommit).
