@@ -9,9 +9,9 @@ func GitDiff(all bool) string {
 	var cmd *exec.Cmd
 
 	if all {
-		cmd = exec.Command("git", "diff")
+		cmd = exec.Command("git", "diff", "--name-only")
 	} else {
-		cmd = exec.Command("git", "diff", "--cached")
+		cmd = exec.Command("git", "diff", "--cached", "--name-only")
 	}
 
 	diff, err := cmd.Output()
